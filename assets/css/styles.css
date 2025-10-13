@@ -304,11 +304,12 @@ input, textarea, select, button {
 
 /* About */
 .about {
-    margin-top: 207px;
+    margin-top: 130px;
 }
 
 .about__inner {
     display: grid;
+    align-items: center;
     grid-template-columns: 1fr 1fr;
 }
 
@@ -348,7 +349,75 @@ input, textarea, select, button {
 
 .about__check-item::after {
     position: absolute;
-    top: 5px;
+    top: 2px;
     left: 5px;
     content: url(../icons/check.svg);
 }
+
+.about__media {
+    position: relative;
+}
+
+.about__card {
+    position: absolute;
+    top: 165px;
+    left: 0;
+    padding: 32px 26px;
+    width: 136px;
+    border-radius: 10px;
+    background: #5BD6E2;
+    box-shadow: -15px 26px 48px 0 rgba(85, 240, 255, 0.17);
+    text-align: center;
+}
+
+.about__card-title {
+    color: #FFF;
+    font-family: Sora;
+    font-size: 4.2rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.about__card-desc {
+    margin-top: 14px;
+    width: 83px;
+    color: #C6F4F9;
+    font-size: 1.4rem;
+    line-height: 1.43; 
+}
+
+.about__card-decor {
+    position: absolute;
+    right: -32px;
+    top: -37px;
+}
+
+.about__img-wrap {
+    position: relative;
+    width: 494px;
+    margin-left: auto;
+}
+
+.about__img-wrap::after {
+    position: absolute;
+    inset: auto 0 0 0;
+    content: '';
+    height: 336px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #FCE0EF 0%, #FAC3D1 100%);
+    z-index: -1;
+}
+
+.about__img {
+    width: 450px;
+    display: block;
+    margin: 0 auto;
+}
+
+.about__wrap-decor {
+    position: absolute;
+    top: 157px;
+    right: -51px;
+    z-index: -1;
+}
+
