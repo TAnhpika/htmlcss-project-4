@@ -71,9 +71,9 @@ input, textarea, select, button {
 }
 
 .btn--primary {
-    color: #fff;
-    background: var(--primary-color);
-    border: var(--primary-color);
+    color: #fff !important;
+    background: var(--primary-color) !important;
+    border: var(--primary-color) !important;
 }
 
 .section-label {
@@ -787,6 +787,10 @@ input, textarea, select, button {
     background: #FFF6ED;
 }
 
+.pricing__container {
+    width: 994px;
+}
+
 .pricing__top {
     text-align: center;
 }
@@ -801,10 +805,6 @@ input, textarea, select, button {
     margin-top: 38px;
     display: flex;
     justify-content: center;
-}
-
-.pricing__switch {
-
 }
 
 .pricing__switch-label {
@@ -859,4 +859,81 @@ input, textarea, select, button {
     position: absolute;
     right: -118px;
     top: -10px;
+}
+
+.pricing__list {
+    margin-top: 56px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 44px;
+}
+
+.pricing-item {
+    max-width: 302px;
+    padding: 30px 28px 43px;
+    border-radius: 20px;
+    background: #FFF;
+}
+
+.pricing-item__type {
+    color: #FF5B2E;
+    font-size: 1.2rem;
+    line-height: 1; /* 100% */
+}
+
+.pricing-item__heading {
+    margin-top: 8px;
+    color: #3F4065;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1; 
+}
+
+.pricing-item__price {
+    margin-top: 24px;
+    color: #000958;
+    font-family: Sora, sans-serif;
+    font-size: 33px;
+    font-weight: 700;
+    line-height: 1.03; 
+}
+
+.pricing-item__btn {
+    --height: 44px;
+
+    margin-top: 22px;
+    background: transparent;
+    width: 246px;
+    border-radius: 39px;
+    border: 1px solid rgba(255, 91, 46, 0.60);
+    color: #FF5B2E;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.pricing-item__list {
+    margin-top: 24px;
+}
+
+.pricing-item__item {
+    margin-top: 18px; /*Margin collapse*/
+    color: #656689;
+    font-size: 14px;
+    line-height: 1; 
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+}
+
+.pricing-item__item::before {
+    content: url(../icons/pricing-check.svg);
+}
+
+.pricing-item:first-child .pricing-item__item:nth-child(5)::before ,
+.pricing-item:first-child .pricing-item__item:nth-child(6)::before ,
+.pricing-item:first-child .pricing-item__item:nth-child(7)::before,
+.pricing-item:nth-child(2) .pricing-item__item:nth-child(5)::before ,
+.pricing-item:nth-child(2) .pricing-item__item:nth-child(6)::before ,
+.pricing-item:nth-child(2) .pricing-item__item:nth-child(7)::before {
+    content: url(../icons/pricing-uncheck.svg);
 }
