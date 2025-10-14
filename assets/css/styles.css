@@ -781,3 +781,82 @@ input, textarea, select, button {
     line-height: 1; 
 }
 
+/* Pricing */
+.pricing {
+    padding: 86px 0;
+    background: #FFF6ED;
+}
+
+.pricing__top {
+    text-align: center;
+}
+
+.pricing__desc {
+    max-width: 709px; /*Use width auto margin left 0*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pricing__switch-wrap {
+    margin-top: 38px;
+    display: flex;
+    justify-content: center;
+}
+
+.pricing__switch {
+
+}
+
+.pricing__switch-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 276px;
+    height: 56px;
+    padding: 0 40px;
+    border-radius: 99px;
+    border: 1px solid rgb(255 91 46 / 60%);
+    user-select: none;
+    cursor: pointer;
+}
+
+.pricing__switch-label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 140px;
+    height: 100%;
+    border-radius: inherit;
+    background: #FF5B2E;
+}
+
+.pricing__switch-value {
+    position: relative;
+    z-index: 1;
+    color: #FFF;
+    font-weight: 500;
+    line-height: 1; 
+}
+
+.pricing__switch-input:checked + .pricing__switch-label::before {
+    left: auto;
+    right: 0;
+    width: 131px;
+}
+
+.pricing__switch-input:not(:checked) + .pricing__switch-label .pricing__switch-value:last-child,
+.pricing__switch-input:checked + .pricing__switch-label .pricing__switch-value:first-child {
+    color: #FF5B2E;
+}
+
+.pricing__switch-inner {
+    position: relative;
+}
+
+.pricing__sale-off {
+    position: absolute;
+    right: -118px;
+    top: -10px;
+}
