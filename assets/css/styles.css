@@ -489,13 +489,9 @@ input, textarea, select, button {
     margin-bottom: 50px;
 }
 
-.tab {
-    
-}
-
 .tab__list {
     position: relative;
-    display: flex;
+    display: inline-flex;
     column-gap: 56px;
 }
 
@@ -571,3 +567,105 @@ input, textarea, select, button {
     opacity: 1;
 }
 
+/* Services */
+.service {
+    margin-top: 190px;
+    padding: 68px 0 100px;
+    background: #FFF6ED;
+}
+
+.service__top {
+    text-align: center;
+}
+
+.service__body {
+    margin-top: 71px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    column-gap: 65px;
+}
+
+.service-item {
+    width: 294px;
+    padding: 30px 28px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 188, 122, 0.26);
+    background: #FFF;
+}
+
+.service-item + .service-item {
+    margin-top: 24px;
+}
+
+.service-item__heading {
+    color: #000958;
+    font-family: Sora, sans-serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
+.service-item__heading::before {
+    content: '';
+    display: inline-block;
+    margin-right: 12px;
+    width: 2px;
+    height: 22px;
+    background: linear-gradient(90deg, #FF5B2E 0.39%, #FFA187 100.29%);
+}
+
+.service-item__desc {
+    margin-top: 18px;
+    width: 244px;
+    color: #656689;
+    font-size: 1.4rem;
+    line-height: 1.71; 
+}
+
+.service-item__more {
+    margin-top: 24px;
+    color: #34396A;
+    font-family: Sora, sans-serif;
+    font-size: 1.2rem;
+    line-height: 1; 
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+}
+
+.service__media {
+    position: relative;
+    margin-top: 17px;
+}
+
+.service__media::after {
+    position: absolute;
+    content: '';
+    height: 350px;
+    left: 16px;
+    right: 16px;
+    bottom: 0;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #9DF1FB 0%, #73D0DB 108.14%);
+}
+
+.service__img {
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.service__btn-wrap {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.service__btn {
+    min-width: 214px;
+    border-color: rgb(255, 91, 46, 0.6);
+    color: #ff5b2e;
+}
