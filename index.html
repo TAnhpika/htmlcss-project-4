@@ -31,6 +31,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tanhpika/popzy/popzy.min.css">
 </head>
 <body>
     <!-- Header -->
@@ -125,7 +126,7 @@
                         <p class="hero__desc">Discover a wide variety of Pawsitive services to choose from, including daycare, private walks, office duty and spa.</p>
     
                         <div class="hero__row">
-                            <a href="#!" class="btn btn--primary hero__cta-btn">
+                            <a href="#!" class="btn btn--primary hero__cta-btn" id="book-a-meet-btn">
                                 Book a Meet
                                 <span class="btn__icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="5" height="6" viewBox="0 0 5 6" fill="none">
@@ -763,5 +764,28 @@
             </div>
         </div>
     </footer>
+    <template id="book-a-meet">
+        <h1>Book a meet</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente harum fugit, eos distinctio praesentium ut maiores? Corrupti veniam deleniti porro.</p>
+    </template>
+    <script src="https://cdn.jsdelivr.net/gh/tanhpika/popzy/popzy.min.js"></script>
+    <script>
+        const bookAMeetBtn = document.querySelector('#book-a-meet-btn')
+
+        const bookAMeetModal = new Popzy( {
+            templateId: 'book-a-meet',
+            closeMethods: ['escape', 'overlay'],
+            footer: true,
+        })
+
+        bookAMeetModal.addFooterButton('Close', '', e => {
+            console.log(e);
+            bookAMeetModal.close()
+        })
+
+        bookAMeetBtn.onclick = () => {
+            bookAMeetModal.open()
+        }
+    </script>
 </body>
 </html>
