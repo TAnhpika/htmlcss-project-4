@@ -31,7 +31,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tanhpika/popzy/popzy.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tanhpika/popzy@v1.0.0/popzy.min.css">
 </head>
 <body>
     <!-- Header -->
@@ -768,7 +768,7 @@
         <h1>Book a meet</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente harum fugit, eos distinctio praesentium ut maiores? Corrupti veniam deleniti porro.</p>
     </template>
-    <script src="https://cdn.jsdelivr.net/gh/tanhpika/popzy/popzy.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/tanhpika/popzy@v1.0.0/popzy.min.js"></script>
     <script>
         const bookAMeetBtn = document.querySelector('#book-a-meet-btn')
 
@@ -776,6 +776,7 @@
             templateId: 'book-a-meet',
             closeMethods: ['escape', 'overlay'],
             footer: true,
+            enableScrollLock: false,
         })
 
         bookAMeetModal.addFooterButton('Close', '', e => {
